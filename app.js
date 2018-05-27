@@ -1,4 +1,5 @@
-let age = prompt('Ingrese su edad (años)');
+
+let age = (prompt('Ingrese su edad (años)'));
 
 const msgOne= 'toddler';
 const msgTwo= 'preschooler';
@@ -7,7 +8,10 @@ const msgFour = 'teenager';
 const msgFive = 'young adult';
 const msgSix = 'adult';
 
-    if (age >= 1 && age <= 3) {
+if (age % 1 !== 0 || age === '0' || age === NaN || age === '') {
+    alert('Error: el valor ingresado no es válido'); 
+
+}   if (age >= 1 && age <= 3) {
       alert('You are a ' + msgOne);
     } else if (age >3 && age <=5) {
         alert('You are a ' + msgTwo);
@@ -18,12 +22,5 @@ const msgSix = 'adult';
     } else if (age >18 && age <=21) {
         alert('You are a ' + msgFive);
     } else if (age >21) {
-        alert('You are a ' + msgSix);
-    } else{
-        alert('Please enter a valid number');
+        alert('You are an ' + msgSix);
     }
-    
-    
-    
-
-
